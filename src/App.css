@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f0ff;
+  color: #333;
+}
+
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+}
+
+nav h2 {
+  color: #7b68a6;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a:hover {
+  color: #7b68a6;
+}
+
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+
+  padding: 40px;
+  margin-top: 20px;
+
+  border-radius: 20px;
+}
+
+.home h1 {
+  color: #4f406d;
+  font-size: 35px;
+}
+
+.home p:first-child {
+  color: #8e7dbe;
+  font-weight: bold;
+}
+
+.home img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+.card {
+  background-color: white;
+
+  padding: 25px;
+
+  margin-top: 20px;
+
+  border-radius: 20px;
+}
+
+.card h2 {
+  color: #7b68a6;
+
+  border-bottom: 2px solid #e5ddf5;
+
+  padding-bottom: 10px;
+}
+
+.card p {
+  line-height: 1.6;
+}
+
+.hobby {
+  display: flex;
+  gap: 20px;
+}
+
+.hobby div {
+  flex: 1;
+
+  padding: 20px;
+
+  background-color: #f5f0ff;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.hobby span {
+  font-size: 35px;
+}
+
+.kontak {
+  display: flex;
+  gap: 15px;
+}
+
+.kontak p {
+  background-color: #f5f0ff;
+
+  padding: 15px;
+
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #777;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .home img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hobby {
+    flex-direction: column;
+  }
+
+  .kontak {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
