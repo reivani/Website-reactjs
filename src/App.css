@@ -1,164 +1,277 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f0ff;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+/* Tampilan utama */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f4fe;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Container */
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 20px 0 40px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px 0;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
 nav h2 {
-  color: #7b68a6;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #6c5ce7;
+  font-weight: 700;
 }
 
-nav a {
+nav div a {
   margin-left: 20px;
   text-decoration: none;
-  color: #555;
+  color: #666666;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #7b68a6;
+nav div a:hover {
+  color: #6c5ce7;
 }
-
 
 .home {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background-color: white;
-
-  padding: 40px;
-  margin-top: 20px;
-
+  background-color: #ffffff;
+  padding: 50px 45px;
+  margin-bottom: 20px;
   border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.home .greeting {
+  display: inline-block;
+  background-color: #f0edff;
+  color: #6c5ce7;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .home h1 {
-  color: #4f406d;
-  font-size: 35px;
+  color: #2d3436;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
-.home p:first-child {
-  color: #8e7dbe;
-  font-weight: bold;
+.home h3 {
+  color: #6c5ce7;
+  font-size: 1.1rem;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.home .campus {
+  color: #777777;
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 .home img {
-  width: 220px;
-  height: 220px;
-
+  width: 190px;
+  height: 190px;
   object-fit: cover;
-
   border-radius: 50%;
+  border: 5px solid #f0edff;
 }
 
-
 .card {
-  background-color: white;
-
-  padding: 25px;
-
-  margin-top: 20px;
-
+  background-color: #ffffff;
+  padding: 28px;
+  margin-bottom: 20px;
   border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .card h2 {
-  color: #7b68a6;
-
-  border-bottom: 2px solid #e5ddf5;
-
-  padding-bottom: 10px;
+  color: #6c5ce7;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #f0edff;
+  padding-bottom: 8px;
+  font-weight: 600;
 }
 
 .card p {
-  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+.biodata-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.biodata-item {
+  background-color: #f6f4fe;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.biodata-item span {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c5ce7;
+  font-weight: 600;
+}
+
+.biodata-item strong {
+  color: #333333;
+  font-weight: 500;
 }
 
 .hobby {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
-.hobby div {
-  flex: 1;
-
+.hobby-card {
   padding: 20px;
-
-  background-color: #f5f0ff;
-
-  border-radius: 15px;
-
+  background-color: #f6f4fe;
+  border-radius: 14px;
   text-align: center;
 }
 
-.hobby span {
-  font-size: 35px;
+.hobby-card p {
+  font-size: 13px;
+}
+
+.hobby-card span {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hobby-card h3 {
+  margin: 0 0 6px 0;
+  color: #333333;
+  font-weight: 600;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.gallery-card {
+  background-color: #f6f4fe;
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-card h3 {
+  margin: 12px 0 6px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.gallery-card p {
+  font-size: 0.9rem;
+  color: #555555;
 }
 
 .kontak {
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
 }
 
-.kontak p {
-  background-color: #f5f0ff;
+.kontak-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f6f4fe;
+  padding: 14px;
+  border-radius: 12px;
+}
 
-  padding: 15px;
+.kontak-item span {
+  font-size: 1.3rem;
+}
 
-  border-radius: 10px;
+.kontak-item p {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 footer {
   text-align: center;
-
-  padding: 30px;
-
-  color: #777;
+  padding: 20px 0;
+  color: #777777;
+  font-size: 0.9rem;
 }
+
+footer p {
+  margin: 4px 0;
+}
+
 
 /* Tampilan HP */
 @media (max-width: 700px) {
-
-  .home {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .home h1 {
-    font-size: 28px;
-  }
-
-  .home img {
-    width: 180px;
-    height: 180px;
-  }
-
-  .hobby {
-    flex-direction: column;
-  }
-
-  .kontak {
-    flex-direction: column;
-  }
-
   nav {
     flex-direction: column;
     gap: 10px;
   }
 
+  nav div a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 35px 20px;
+    gap: 20px;
+  }
+
+  .home h1 {
+    font-size: 1.8rem;
+  }
+
+  .home img {
+    width: 150px;
+    height: 150px;
+  }
 }
